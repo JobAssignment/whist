@@ -2,11 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import React from "react";
 
-import Admin from "./Admin";
-import Home from "./Home";
+import Admin from "./Admin/Admin";
+import Home from "./Home/Home";
 import Stats from "./Stats";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <Router>
       <nav className="navbar navbar-dark bg-dark">
@@ -25,9 +25,13 @@ function NavBar() {
         </Container>
       </nav>
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact render={() => <Home list={props.list}></Home>} />
         <Route path="/admin" exact component={Admin} />
-        <Route path="/home" exact component={Home} />
+        <Route
+          path="/home"
+          exact
+          render={() => <Home list={props.list}></Home>}
+        />
         <Route path="/stats" exact component={Stats} />
       </Switch>
     </Router>

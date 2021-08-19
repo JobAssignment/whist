@@ -1,12 +1,10 @@
-import { observer, inject } from "mobx-react";
-
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { React, useEffect, useState } from "react";
 
-import NavBar from "./components/NavBar";
+import ProductsList from "./ProductsList";
+import { observer, inject } from "mobx-react";
 
-const App = inject("ShoppingStore")(
+
+const Admin = inject("ShoppingStore")(
   observer((props) => {
     const [list, SetList] = useState([]);
     const fetchData = async () => {
@@ -17,12 +15,15 @@ const App = inject("ShoppingStore")(
       fetchData();
     }, []);
 
+    const handleAdd = () => {};
+
     return (
       <div>
-        <NavBar list={list}></NavBar>
+        
+        <ProductsList productsList={list}></ProductsList>
       </div>
     );
   })
 );
 
-export default App;
+export default Admin;
