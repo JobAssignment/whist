@@ -48,7 +48,6 @@ const ItemModal = inject("ShoppingStore")(
     };
 
     const handleCreate = () => {
-      props.ShoppingStore.createNewProduct(item);
       Swal.fire({
         title: "Uploading...",
         html: "Please wait...",

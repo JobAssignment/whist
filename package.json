@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "dayjs": "^1.10.6",
     "mobx": "^6.3.2",
     "mobx-react": "^7.2.0",
     "mysql2": "^2.2.5",

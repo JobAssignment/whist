@@ -21,10 +21,7 @@ const ProductsList = inject("ShoppingStore")(
       setShowModal(!showModal);
     };
     const handleSelectedItem = (item) => {
-      console.log(" item clicked  ");
       setSelectedItem(item);
-      // setShowModal(!showModal);
-      console.log(" item clicked  ", item, showModal);
     };
     const handleAddNewProduct = () => {
       setShowCreate(!showCreate);

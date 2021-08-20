@@ -1,0 +1,9 @@
+.cart-debt {
+  background-color: darkgreen;
+}
+
+.sticky-med {
+    position: fixed;
+    top: 0;
+    right: 25%;
+  }

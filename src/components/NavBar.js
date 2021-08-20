@@ -4,7 +4,7 @@ import React from "react";
 
 import Admin from "./Admin/Admin";
 import Home from "./Home/Home";
-import Stats from "./Stats";
+import Stats from "./Stats/Stats";
 
 function NavBar(props) {
   return (

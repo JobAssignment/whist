@@ -19,7 +19,7 @@ const App = inject("ShoppingStore")(
 
     return (
       <div>
-        <NavBar list={list}></NavBar>
+        <NavBar list={props.ShoppingStore.productsListComputed}></NavBar>
       </div>
     );
   })

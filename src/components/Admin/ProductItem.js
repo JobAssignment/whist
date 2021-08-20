@@ -18,7 +18,7 @@ const ProductItem = inject("ShoppingStore")(
       const name = e.target.name;
       // props.ShoppingStore[name](props.item); // this wile be used for both handle
       // console.log(props.item.id, "clicked");
-      props.handleModalChange();
+      // props.handleModalChange();
     };
 
     // const handleModalChange = () => {};
@@ -38,7 +38,7 @@ const ProductItem = inject("ShoppingStore")(
         confirmButtonText: "Yes, delete it!",
       }).then(async (result) => {
         if (result.isConfirmed) {
-          props.ShoppingStore.deleteProduct(props.item);
+          await props.ShoppingStore.deleteProduct(props.item);
 
           Swal.fire("Deleted!", `The data has been deleted. 😔`, "success");
         }
